@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Admins;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
 class AdminLoginController extends Controller
@@ -18,19 +19,19 @@ class AdminLoginController extends Controller
         ]);
 
         if($validator->fails()){
-            return redirect()->back()->withErrors('error', "Missing required feilds");
+            return redirect()->back()->with('error', "Missing required feilds");
         }
         // variables
-        $login = $request->input('username');
+        $login = $request->input('login');
         $passwd = $request->input('password');
 
         $checkAdmins = Admins::where('login', $login)->first();
-
-        if ($checkAdmins && password_verify($passwd, $checkAdmins->passwd)) {
-            session()->put('remeber-nfa-token', $checkAdmins->rememberToken);
+        if ($checkAdmins && Hash::check($passwd, $checkAdmins->passwd)) {
+            session()->put('remeberNfaToken', $checkAdmins->remember_token);
+            // dd(session()->get('remeber-nfa-token'));
             return redirect('/admin/dashboard');
         } else {
-            return redirect()->back()->withErrors('error', "Login or password wrong!");
+            return redirect()->back()->with('error', "Login or password wrong!");
         }        
     }
 }

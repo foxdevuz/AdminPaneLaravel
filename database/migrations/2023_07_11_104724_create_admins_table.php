@@ -5,7 +5,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Schema;
-
+use Illuminate\Support\Str;
 return new class extends Migration
 {
     /**
@@ -25,7 +25,8 @@ return new class extends Migration
         Admins::create([
             'name'=>"NFA Admin",
             'login'=>'nfa-admin',
-            'passwd'=>Hash::make('nfa#admins')
+            'passwd'=>Hash::make('nfa#admins'),
+            'remember_token'=> Str::random(30)
         ]);
     }
 
