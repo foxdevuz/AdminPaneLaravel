@@ -21,13 +21,6 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
-
-        Admins::create([
-            'name'=>"NFA Admin",
-            'login'=>'nfa-admin',
-            'passwd'=>Hash::make('nfa#admins'),
-            'remember_token'=> Str::random(30)
-        ]);
     }
 
     /**
