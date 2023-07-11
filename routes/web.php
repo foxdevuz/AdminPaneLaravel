@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminLoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin/dashboard', [AdminController::class, 'dashboard']);
-Route::get('/login', function (){
-    return view('admin.login');
-});
+Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->middleware('adminSessionController');
+Route::get('/login', [AdminLoginController::class, 'login']);
+// post methods
+Route::post('/login', [AdminLoginController::class, 'loginSession']);

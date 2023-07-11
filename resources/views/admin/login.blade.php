@@ -21,19 +21,13 @@
                 <span class="title">Login</span>
                 <form action="/login" method="POST">
                     <div class="input-field">
-                        <input type="text" name="username" placeholder="Loginni kiriting" required autocomplete="off">
+                        <input type="text" name="login" placeholder="Loginni kiriting" required autocomplete="off">
                         <i class="uil uil-envelope icon"></i>
-                        @error('username')
-                            <div class="error">{{ $message }}</div>
-                        @enderror
                     </div>
                     <div class="input-field">
                         <input type="password" name="password" class="password" placeholder="Parolni kiriting" required autocomplete="off">
                         <i class="uil uil-lock icon"></i>
                         <i class="uil uil-eye-slash showHidePw"></i>
-                        @error('password')
-                            <div class="error">{{ $message }}</div>
-                        @enderror
                     </div>
                     @csrf
                     @if (session()->has('error'))
