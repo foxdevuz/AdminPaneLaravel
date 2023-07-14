@@ -28,7 +28,6 @@ class AdminLoginController extends Controller
         $checkAdmins = Admins::where('login', $login)->first();
         if ($checkAdmins && Hash::check($passwd, $checkAdmins->passwd)) {
             session()->put('remeberNfaToken', $checkAdmins->remember_token);
-            // dd(session()->get('remeber-nfa-token'));
             return redirect('/admin/dashboard');
         } else {
             return redirect()->back()->with('error', "Login or password wrong!");

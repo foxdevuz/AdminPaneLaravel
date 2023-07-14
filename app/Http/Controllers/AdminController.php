@@ -28,4 +28,24 @@ class AdminController extends Controller
         ]);
         return redirect()->back()->with('success', 'Yangilik qo\'shildi ');
     }
+    # admin panel direction btw ap = admin panel
+    public function ap_showAll() {
+        $get = MainPageNews::all();
+        return view('admin.show', ['all'=>$get]);
+    }
+
+    public function mainpagenews_destroy(Request $req){
+        $validation = Validator::make($req->all(), [
+            'id'=>['required']
+        ]);
+        if($validation->fails()){
+            return redirect('/admin/mainPageNew')->with('error', 'ID talab qilinadi');
+        }
+        $find = MainPageNews::find($req->input('id'));
+        if(!$find){
+            return redirect('/admin/mainPageNew')->with('error', 'Ushbu IDdagi ma\'lumot mavjud emas');
+        }
+        $find->delete();
+        return redirect('/admin/mainPageNew')->with('success', 'Ma\'lumot o\'chirildi');
+    }
 }

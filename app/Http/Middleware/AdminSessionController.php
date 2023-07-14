@@ -16,8 +16,7 @@ class AdminSessionController
     public function handle(Request $request, Closure $next): Response
     {
         if (!session()->has('remeberNfaToken')) {
-            // dd(session()->has('remeberNfaToken'));
-            return redirect('/login')->with('error', 'Admin session has expired, please login again');
+            return redirect('/login')->with('error', 'Admin session has expired, please login again. Session: ');
         }
 
         return $next($request);

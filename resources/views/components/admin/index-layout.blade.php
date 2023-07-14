@@ -53,6 +53,12 @@
           <!--//Page content//-->
           <div class="content p-4 pb-0 d-flex flex-column-fluid position-relative">
             <div class="container-fluid px-0">
+                @if (session()->has('error'))
+                    <x-extra.messages>{{ session()->get('error') }}</x-extra.messages>
+                @endif
+                @if (session()->has('success'))
+                    <x-extra.messages>{{ session()->get('success') }}</x-extra.messages>
+                @endif
                 {{ $slot }}
             </div>
           </div>

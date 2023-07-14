@@ -1,7 +1,4 @@
 <x-admin.index-layout>
-    @if (session()->has('error'))
-        <x-extra.messages>{{ sesion()->get('error') }}</x-extra.messages>
-    @endif
     <form action="/mainPage" method="post" enctype="multipart/form-data">
         @csrf
         <label for="title" class="form-label">Xabar mavzusi <small class="text-warning">30ta xarfdan oshmasligi tasiya qilinadi</small></label>

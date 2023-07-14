@@ -33,4 +33,5 @@ class DirectionController extends Controller
     public function coach(){
         return view('extra.coach');
     }
+
 }
