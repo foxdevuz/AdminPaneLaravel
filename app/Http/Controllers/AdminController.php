@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\MainPageNews;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class AdminController extends Controller
@@ -45,6 +46,7 @@ class AdminController extends Controller
         if(!$find){
             return redirect('/admin/mainPageNew')->with('error', 'Ushbu IDdagi ma\'lumot mavjud emas');
         }
+        Storage::delete('public/images/'.$find->file);
         $find->delete();
         return redirect('/admin/mainPageNew')->with('success', 'Ma\'lumot o\'chirildi');
     }
