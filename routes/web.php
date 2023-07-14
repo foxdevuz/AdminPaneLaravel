@@ -34,3 +34,6 @@ Route::get('/club/doctors', [DirectionController::class, 'doctors']);
 Route::get('/club/coachs', [DirectionController::class, 'coach']);
 // post methods
 Route::post('/login', [AdminLoginController::class, 'loginSession']);
+
+# Admin Panel Store Methods
+Route::post('/mainPage', [AdminController::class, 'firstPageNews'])->middleware('sessionadmin');

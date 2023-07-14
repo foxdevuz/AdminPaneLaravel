@@ -32,6 +32,6 @@ class AdminLoginController extends Controller
             return redirect('/admin/dashboard');
         } else {
             return redirect()->back()->with('error', "Login or password wrong!");
-        }        
+        }
     }
 }
