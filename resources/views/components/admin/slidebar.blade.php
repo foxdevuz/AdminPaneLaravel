@@ -39,6 +39,7 @@
                         <ul data-bs-target="#dashboards" id="dashboards"
                             class="sidebar-dropdown list-unstyled collapse">
                             <li class="sidebar-item"><a class="sidebar-link" href="/admin/dashboard">Asosiy</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="/admin/addNews">Yangilik qo'shish</a></li>
                         </ul>
                         </ul>
                     </li>
@@ -60,6 +61,7 @@
                         <ul data-bs-target="#showAll" id="showAll"
                             class="sidebar-dropdown list-unstyled collapse">
                             <li class="sidebar-item"><a class="sidebar-link" href="/admin/mainPageNew">Asosiy qism yangiligi</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="/admin/allNews">Barcha yangiliklar</a></li>
                         </ul>
                         </ul>
                     </li>
