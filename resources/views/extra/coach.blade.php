@@ -7,6 +7,16 @@
             </div>
             <div class="row g-5">
                <x-extra.club-extra.coach-card/>
+               <x-extra.club-extra.coach-card/>
+               <x-extra.club-extra.coach-card/>
+               <x-extra.club-extra.coach-card/>
+               <x-extra.club-extra.coach-card/>
+               <x-extra.club-extra.coach-card/>
+               <x-extra.club-extra.coach-card/>
+               <x-extra.club-extra.coach-card/>
+               <x-extra.club-extra.coach-card/>
+               <x-extra.club-extra.coach-card/>
+               <x-extra.club-extra.coach-card/>
             </div>
         </div>
     </div>

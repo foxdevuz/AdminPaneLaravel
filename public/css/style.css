@@ -326,14 +326,13 @@ h6,
 }
 
 .image {
-  border-radius: 50%;
   align-items: center;
   object-fit: cover;
   width: 80px;
   height: 80px;
   position: absolute;
-  top: -12%;
-  margin-left: 5pc;
+  top: -5%;
+  margin-left: 2.5pc;
 }
 
 .contatiner {
@@ -382,9 +381,10 @@ img {
   height: 230px;
   width: 100%;
   text-align: center;
+  object-fit: cover;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-style: italic;
-  background: linear-gradient(rgba(43, 40, 37, 0.9), rgba(43, 40, 37, 0.9));
+  background: url("../img//red-black-brush-stroke-banner-background-perfect-canva.jpg");
 }
 
 .textni h1:hover {
@@ -397,7 +397,6 @@ img {
   font-size: 35px;
   margin-left: 2pc;
   align-items: center;
-  /* color: blue; */
 }
 
 .Happyu_brithday_image {
@@ -423,6 +422,9 @@ img {
 .clearfix {
   width: 50%;
   margin-left: 2.5pc;
+}
+.brat{
+    border-radius: 16px;
 }
 @media only screen and (max-width: 414px) {
   .ufaImage {

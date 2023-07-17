@@ -7,7 +7,12 @@
             <div class="tab-class text-center">
                 <div class="container-fluid py-5">
                     <div class="container">
-                        <x-extra.club-extra.coach/>
+                        <div class="row g-5" style="justify-content: space-around ;">
+                            <x-extra.club-extra.coach/>
+                            <x-extra.club-extra.coach/>
+                        </div>
+
+
                     </div>
                 </div>
             </div>

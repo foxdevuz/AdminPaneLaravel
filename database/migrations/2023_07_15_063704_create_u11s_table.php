@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('u11s', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('image');
+            $table->string('birthday');
             $table->timestamps();
         });
     }

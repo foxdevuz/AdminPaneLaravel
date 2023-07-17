@@ -19,7 +19,7 @@
             <a href="/football-news" class="dropdown-item">Futbol yangiliklar <a>
         </div>
         </div>
-        <a href="/club/news" class="nav-item nav-link">Klub yangiliklari</a>
+        <a href="/club/news" class="nav-item nav-link">Akademiya yangiliklari</a>
         <div class="nav-item dropdown">
         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Jamoalar</a>
         <div class="dropdown-menu m-0" style="background: #ffffff;">
@@ -46,6 +46,7 @@
         <a target="_blank" href="https://t.me/NFAFutbolakademiya"><i class="ufaImagey fa-brands fa-telegram"></i></a>
         <a target="_blank" href="https://www.instagram.com/futbol.akedemiya.namangan/"><i class="ufaImagey fa-brands fa-youtube"></i></a>
         <a target="_blank" href="https://www.youtube.com/@namanganfootballacademyfoo9808"><i class="ufaImagey fa-brands fa-instagram"></i></a>
+        <a target="_blank" href="https://www.youtube.com/@namanganfootballacademyfoo9808"><i class="ufaImagey fa-brands fa-facebook"></i></a>
     </div>
     </div>
 </nav>
